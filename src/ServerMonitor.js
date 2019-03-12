@@ -4,7 +4,8 @@ const CreateFakeServerMonitorAPI = () => {
     
     const notify = () => {
         online = !online;
-        fns.forEach(fn => fn(online));
+        const fnsCpy = fns.slice();
+        fnsCpy.forEach(fn => fn(online));
     }
 
     setTimeout(() => {
@@ -15,10 +16,10 @@ const CreateFakeServerMonitorAPI = () => {
     }, 1000);
 
     return {
-        subscribe: fn => {
+        subscribe: (fn, name) => {
             fns.push(fn);
         },
-        unsubscribe: fn => {
+        unsubscribe: (fn, name) => {
             const index = fns.indexOf(fn);
             if (index !== -1) {
                 fns.splice(index, 1);
