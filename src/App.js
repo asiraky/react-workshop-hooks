@@ -1,9 +1,9 @@
 import React from 'react';
 import { Nav, Navbar, Container, Row, Col } from 'react-bootstrap';
 
-import { StatusBar } from './solution/StatusBar';
-import { ToastNotification } from './solution/ToastNotification';
-import { StatusMessage } from './solution/StatusMessage';
+import { StatusBar } from './exercise/StatusBar';
+import { ToastNotification } from './exercise/ToastNotification';
+import { StatusMessage } from './exercise/StatusMessage';
 
 import { ServerMonitorAPI } from './ServerMonitor'
 
